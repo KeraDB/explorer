@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.35;
+  font-weight: 400;
+  font-size: 13px;
+  --zoom-level: 1;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* CSS Variables for Tailwind */
+  --background: 0 0% 14%;
+  --foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  zoom: var(--zoom-level);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Compact spacing utilities */
+@layer utilities {
+  .compact-card {
+    @apply p-2 rounded;
+  }
+  .compact-btn {
+    @apply px-2 py-1 text-xs;
+  }
+  .compact-input {
+    @apply px-2 py-1 text-sm;
+  }
+}
