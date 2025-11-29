@@ -1,0 +1,13 @@
+{
+  "name": "keradb-labs",
+  "version": "0.1.0",
+  "description": "A modern desktop database management application for keradb",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "~1.5"
+  }
+}
