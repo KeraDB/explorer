@@ -14,7 +14,7 @@ tauri-build = { version = "1.5", features = [] }
 tauri = { version = "1.5", features = [ "http-all", "path-all", "fs-all", "dialog-save", "shell-open", "dialog-open"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-keradb = { path = "../../" }
+keradb = { path = "../../keradb" }
 parking_lot = "0.12"
 chrono = { version = "0.4", features = ["serde"] }
 log = "0.4"
