@@ -1,0 +1,25 @@
+[package]
+name = "nosqlite-labs"
+version = "0.1.0"
+description = "A modern desktop database management application for NoSQLite"
+authors = ["NoSQLite Team"]
+license = "MIT"
+repository = "https://github.com/yourusername/nosqlite"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.5", features = [ "http-all", "path-all", "fs-all", "dialog-save", "shell-open", "dialog-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+keradb = { path = "../../" }
+parking_lot = "0.12"
+chrono = { version = "0.4", features = ["serde"] }
+log = "0.4"
+env_logger = "0.11"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
